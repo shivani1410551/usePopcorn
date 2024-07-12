@@ -1,3 +1,4 @@
+import ErrorHandler from "./ErrorHandler";
 import MovieDetails from "./MovieDetails";
 import MoviesList from "./MoviesList";
 import "./App.css";
@@ -107,10 +108,6 @@ export default function App() {
       </Hero>
     </>
   );
-}
-
-function ErrorHandler({ message }) {
-  return <p className="error">{message}</p>;
 }
 
 // passing elements as props

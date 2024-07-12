@@ -1,6 +1,6 @@
 const starStyle = {
-  width: "48px",
-  height: "48px",
+  width: "34px",
+  height: "34px",
   display: "block",
   cursor: "pointer",
 };
@@ -43,15 +43,3 @@ const Star = ({ onRate, full, onHoverIn, onHoverOut, color }) => {
 };
 
 export default Star;
-
-/*
-FULL STAR
-
-
-
-
-EMPTY STAR
-
-
-
-*/
