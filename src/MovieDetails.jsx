@@ -5,7 +5,7 @@ import StarRating from "./StarRating";
 const MovieDetails = ({ selectedID, onCloseMovie }) => {
   const [movie, setMovie] = useState({});
   const [error, setError] = useState("");
-  console.log(selectedID);
+
   const {
     Title: title,
     Year: year,
@@ -18,17 +18,18 @@ const MovieDetails = ({ selectedID, onCloseMovie }) => {
     Director: director,
     Genre: genre,
   } = movie;
-  console.log(movie);
+
   const KEY = "822584fc";
   useEffect(
     function () {
       async function getMovieDetails() {
         try {
           const res = await fetch(
-            `http://www.omdbapi.com/?i=tt3896198&apikey=${KEY}&i=${selectedID}`
+            `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedID}`
           );
           if (!res.ok) throw new Error("Couldn't get movie details");
           const data = await res.json();
+          console.log(data);
           if (data.Response === "False") throw new Error("Incorrect IMDb ID");
           setMovie(data);
         } catch (error) {

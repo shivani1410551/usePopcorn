@@ -42,7 +42,6 @@ export default function App() {
   const [selectedID, setSelectedID] = useState(null);
   const KEY = "822584fc";
   function handleSelectedMovie(id) {
-    console.log(id);
     setSelectedID((selectedID) => (id === selectedID ? null : id));
   }
   function handleCloseMovie() {
